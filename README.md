@@ -54,16 +54,3 @@ Notification abstraction layer
 
 Versioned REST API under /api/v1
 
-Strict DDD patterns (CQRS, event sourcing, heavy domain events) are intentionally avoided to keep the system understandable and maintainable for a small team.
-
-Current Focus
-
-The project is being developed backend-first to:
-
-Stabilize domain logic
-
-Finalize API contracts
-
-Generate Swagger documentation
-
-Enable parallel frontend development
