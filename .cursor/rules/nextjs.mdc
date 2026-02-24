@@ -1,0 +1,17 @@
+---
+description: Next.js 15 App Router conventions for NeuroLounge
+globs: ["src/**/*.ts", "src/**/*.tsx"]
+---
+
+# Next.js 15 Conventions
+
+- Use App Router (not Pages Router)
+- Server Components by default; add 'use client' only when needed (hooks, events, browser APIs)
+- Use `@/` path alias for all imports (maps to `src/`)
+- Route handlers use `NextRequest` and return `NextResponse` or use `withApi` wrapper
+- Dynamic route params are accessed via `{ params: Promise<Record<string, string>> }`
+- Use `next/navigation` for `useRouter`, `useParams`, `usePathname`, `redirect`
+- Fonts loaded via `next/font/google` in root layout
+- Metadata exported from `layout.tsx` or `page.tsx`
+- No `getServerSideProps` or `getStaticProps` -- use Server Components or Route Handlers
+- Turbopack enabled for dev (`next dev --turbopack`)
